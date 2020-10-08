@@ -1,25 +1,26 @@
 import {makeStyles} from "@material-ui/styles";
 
-const useStyles = makeStyles({
+const useStyle = makeStyles({
     root: {
         width: '100%',
         height: '100vh',
         display: 'flex',
         justifyContent: 'space-between'
     },
-    rightSidebar: {
-        width: '18%',
-        backgroundColor: '#bdc3c7',
-
-    },
     leftSidebar: {
         width: '25%',
-        backgroundColor: '#bdc3c7',
+        backgroundColor: '#fff',
     },
     mainPart: {
         flex: '1',
-        backgroundColor: '#bdc3c7',
+        backgroundColor: '#fff',
     },
+    divider: {
+        width: '1',
+        height: '100%',
+        backgroundColor: '#7ebaff',
+        opacity: .5
+    }
 })
 
-export default useStyles
+export default useStyle
