@@ -3,6 +3,7 @@ import RightSidebar from "../RightSidebar/RightSidebar";
 import {Divider} from "@material-ui/core";
 import useStyle from './LayoutStyles';
 import LeftSideBar from "../LeftSideBar/LeftSideBar"
+import Home from "../../Pages/Home/Home"
 
 
 function Layout() {
@@ -11,7 +12,7 @@ function Layout() {
         <div className={classes.root}>
             <RightSidebar/>
             <Divider className={classes.divider} orientation={"vertical"}/>
-            <div className={classes.mainPart}>Main</div>
+            <Home/>
             <Divider className={classes.divider} orientation={"vertical"}/>
             <LeftSideBar/>
         </div>
