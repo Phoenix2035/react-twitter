@@ -23,7 +23,6 @@ function RightSidebar() {
             <Grid container direction={"row"} alignItems={"center"}>
                 <Grid item>
                     <img src='./images/logo.png' alt='logo'/>
-
                 </Grid>
 
                 <Grid item>
@@ -39,9 +38,9 @@ function RightSidebar() {
 
             <Grid container direction={"column"} alignItems={"center"}>
                 {
-                    hashtags.map(item =>
-                        <ButtonBase className={classes.hashtagParent}>
-                            <Grid item container>
+                    hashtags.map((item, index) =>
+                        <ButtonBase className={classes.hashtagParent} key={index}>
+                            <Grid container item>
                                 <img src="./images/hashtag.png" alt="hashtag"/>
                                 <Typography className={classes.hashtag}>
                                     {item}
