@@ -1,9 +1,10 @@
 import {makeStyles} from "@material-ui/styles";
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     root: {
         flex: '1',
         backgroundColor: '#e6e6e6',
+        overflowY:'auto'
     },
     header: {
         padding: 18,
@@ -50,8 +51,35 @@ const useStyle = makeStyles({
         borderRadius: '50%',
         marginLeft: '1rem'
     },
+    tweetItem: {
+        padding: 18,
+        backgroundColor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        marginTop: '.5rem'
+    },
+    tweetItemName: {
+        fontWeight: '600',
+
+    },
+    tweetItemId: {
+        fontSize: '.9rem',
+        color: theme.palette.text.hint,
+        direction: 'ltr',
+        marginRight: '.5rem',
+        paddingTop: '.15rem'
+    },
+    tweetText: {
+        fontSize: '.9rem',
+        marginTop: '.75rem',
+    },
+    likeCount: {
+        fontSize: '.8rem',
+        color: theme.palette.text.hint,
+        marginLeft: '.5rem'
+    }
 
 
-})
+}))
 
 export default useStyle
