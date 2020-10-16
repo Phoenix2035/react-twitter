@@ -5,7 +5,7 @@ import useStyle from "../LeftSideBarStyles";
 function BestTweets({item}) {
     const classes = useStyle()
     return (
-        <ButtonBase>
+        <ButtonBase style={{width:'100%'}}>
             <Grid container className={classes.twitterParent}>
                 <img src={item.img} alt="user" className={classes.profileImg}/>
                 <Grid container item direction={"column"} className={classes.twitterNameParent}>

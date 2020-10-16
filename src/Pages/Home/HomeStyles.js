@@ -2,19 +2,7 @@ import {makeStyles} from "@material-ui/styles";
 
 const useStyle = makeStyles(theme => ({
     root: {
-        flex: '1',
         backgroundColor: '#e6e6e6',
-        overflowY:'auto'
-    },
-    header: {
-        padding: 18,
-        backgroundColor: '#fff',
-        display: 'flex'
-    },
-    headerTitle: {
-        fontSize: '1.1rem',
-        fontWeight: '600',
-        marginRight: '.5rem'
     },
     divider: {
         backgroundColor: '#7ebaff',

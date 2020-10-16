@@ -1,0 +1,27 @@
+.overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40%;
+}
+
+.bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom a{
+  background: #5ea9dd;
+  border: 1px solid #5ea9dd;
+  color: #ffffff;
+  padding: .7rem;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.bottom a:hover{
+  background: #ffffff;
+  color: #333;
+}

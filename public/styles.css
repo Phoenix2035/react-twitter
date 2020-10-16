@@ -1,23 +1,28 @@
 body {
-  margin: 0;
-  direction: rtl;
+    margin: 0;
+    direction: rtl;
 }
 
 .editable:empty:before {
-  content: attr(data-placeholder);
-  color: #999999;
+    content: attr(data-placeholder);
+    color: #999999;
 }
 
 a {
-  text-decoration: none;
-  color:unset;
-
+    text-decoration: none;
+    color: unset;
 }
+
 a:visited {
-  color: unset;
+    color: unset;
 }
 
 
 .uni_m_b_small {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.editable:empty:before {
+    content: attr(data-placeholder);
+    color: #999999;
 }

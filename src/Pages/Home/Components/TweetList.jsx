@@ -5,8 +5,8 @@ function TweetList({data}) {
     return (
         <div>
             {
-                data.map(item=>
-                    <Tweet data={item}/>
+                data.map((item, i) =>
+                    <Tweet key={i} item={item}/>
                 )
             }
         </div>

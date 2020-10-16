@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import useStyle from "./HomeStyles";
-import Header from "../../Components/Header/Header";
 import { Divider } from "@material-ui/core";
-import NewTweet from "./Components/NewTweet";
-import TweetList from "./Components/TweetList";
-import HomeIcon from '@material-ui/icons/Home';
+import useStyle from "../Home/HomeStyles";
+import Header from "../../Components/Header/Header";
+import TweetList from "../Home/Components/TweetList";
 import { getTweets } from '../../Api/Api_Tweet';
 
 
-
-
-
-function Home() {
+function TweetsByHashtag(props) {
     const classes = useStyle()
+
     const [tweets, setTweets] = useState([])
 
     useEffect(() => {
@@ -23,12 +19,11 @@ function Home() {
     }, [])
     return (
         <div className={classes.root}>
-            <Header title={'خانه'} icon={<HomeIcon />} />
+            <Header title={props.match.params.hashtag} icon={<img src="/images/hashtag.png" alt="hashtag" />} />
             <Divider className={classes.divider} />
-            <NewTweet />
             <TweetList data={tweets} />
         </div>
     );
 }
 
-export default Home;
+export default TweetsByHashtag;
