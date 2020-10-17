@@ -5,13 +5,14 @@ import Home from "./Pages/Home/Home";
 import TweetsByHashtag from "./Pages/TweetsByHashtag/TweetsByHashtag";
 import TweetsByUser from "./Pages/TweetsByUser/TweetsByUser";
 import NotFound from "./Pages/404/NotFound";
+import Auth from "./Pages/Auth/Auth";
 
 function App() {
     return (
         <BrowserRouter>
-
-            <Route path={'/'} render={() => {
-                return (
+            <Switch>
+                <Route path={'/login'} component={Auth}/>
+                <Route path={'/'} render={() =>
                     <Layout>
                         <Switch>
                             <Route exact path='/' component={Home}/>
@@ -19,10 +20,9 @@ function App() {
                             <Route path='/users/:user' component={TweetsByUser}/>
                             <Route component={NotFound}/>
                         </Switch>
-
                     </Layout>
-                )
-            }}/>
+                }/>
+            </Switch>
         </BrowserRouter>
     );
 }

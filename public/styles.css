@@ -18,11 +18,9 @@ a:visited {
 }
 
 
-.uni_m_b_small {
-    margin-bottom: 1rem;
-}
 
 .editable:empty:before {
     content: attr(data-placeholder);
     color: #999999;
 }
+
