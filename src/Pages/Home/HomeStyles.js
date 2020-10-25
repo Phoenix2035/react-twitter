@@ -37,7 +37,7 @@ const useStyle = makeStyles(theme => ({
         border: '.5px solid #3337',
         padding: '.2rem',
         borderRadius: '50%',
-        marginLeft: '1rem'
+        transform: 'translateX(.8rem)'
     },
     tweetItem: {
         padding: 18,
@@ -64,7 +64,13 @@ const useStyle = makeStyles(theme => ({
     likeCount: {
         fontSize: '.8rem',
         color: theme.palette.text.hint,
-        marginLeft: '.5rem'
+        marginLeft: '.7rem !important'
+    },
+    tweetImg: {
+        width: '10rem',
+        height: '10rem',
+        backgroundSize: 'cover',
+        marginTop: '1rem'
     }
 
 

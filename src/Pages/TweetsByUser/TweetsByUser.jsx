@@ -5,9 +5,8 @@ import Header from "../../Components/Header/Header"
 import TweetList from "../Home/Components/TweetList"
 import {Person} from '@material-ui/icons'
 import {useParams} from 'react-router-dom'
-import { getTweets } from '../../Api/Api_Tweet';
-
-
+import {getAllTweets} from '../../Api/Api_Tweet';
+import {toast} from "react-toastify";
 
 
 function TweetsByUser() {
@@ -15,9 +14,9 @@ function TweetsByUser() {
     const [tweets, setTweets] = useState([])
 
     useEffect(() => {
-        getTweets((isOk, data) => {
-            if (!isOk) return alert('false');
-            return setTweets(data)
+        getAllTweets((isOk, data) => {
+            if (!isOk) return toast.warn('false');
+            setTweets(data)
         })
 
     }, [])

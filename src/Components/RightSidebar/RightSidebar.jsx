@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { ButtonBase, Grid, Typography } from "@material-ui/core";
+import React, {useEffect, useState} from 'react';
+import {ButtonBase, Grid, Typography} from "@material-ui/core";
 import useStyle from './RightSidebarStyles'
-import { Link } from "react-router-dom";
-import { getHashTags } from '../../Api/Api_Tweet'
+import {Link} from "react-router-dom";
+import {getHashTags} from '../../Api/Api_Tweet'
+import {toast} from "react-toastify";
 
 function RightSidebar() {
     const classes = useStyle()
@@ -11,7 +12,7 @@ function RightSidebar() {
 
     useEffect(() => {
         getHashTags((isOk, data) => {
-            if (!isOk) return alert('false hashtags')
+            if (!isOk) return toast.warn('false hashtags')
             return setHashtags(data)
         })
     }, [])
@@ -22,7 +23,7 @@ function RightSidebar() {
             <Link to={'/'}>
                 <Grid container direction={"row"} alignItems={"center"}>
                     <Grid item>
-                        <img src='/images/logo.png' alt='logo' />
+                        <img src='/images/logo.png' alt='logo'/>
                     </Grid>
 
                     <Grid item>
@@ -41,11 +42,11 @@ function RightSidebar() {
                 {
                     hashtags.map((item, index) =>
                         <ButtonBase className={classes.hashtagParent} key={index}>
-                            <Link to={'/hashtags/' + item} style={{ width: '100%' }}>
+                            <Link to={'/hashtags/' + item.text} style={{width: '100%'}}>
                                 <Grid container item>
-                                    <img src="/images/hashtag.png" alt="hashtag" />
+                                    <img src="/images/hashtag.png" alt="hashtag"/>
                                     <Typography className={classes.hashtag}>
-                                        {item}
+                                        {item.text}
                                     </Typography>
                                 </Grid>
                             </Link>

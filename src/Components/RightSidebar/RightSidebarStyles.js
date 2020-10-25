@@ -4,7 +4,8 @@ const useStyles = makeStyles(theme => ({
     root: {
         width: '18%',
         backgroundColor: '#fff',
-        padding: '1.5rem 1rem'
+        padding: '1.5rem 1rem',
+        overflow:'auto'
     },
     logoType: {
         fontSize: '1.25rem',

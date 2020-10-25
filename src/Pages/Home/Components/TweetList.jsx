@@ -6,7 +6,7 @@ function TweetList({data}) {
         <div>
             {
                 data.map((item, i) =>
-                    <Tweet key={i} item={item}/>
+                    <Tweet key={i} data={item}/>
                 )
             }
         </div>

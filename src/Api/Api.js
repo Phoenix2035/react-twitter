@@ -2,10 +2,17 @@ import Axios from 'axios'
 
 
 export const API = () => {
-  return  Axios.create({
-        baseURL: 'http://localhost:3000',
+    return Axios.create({
+        baseURL: "https://twitterapi.liara.run/api",
+    });
+};
+
+
+export const instanceAPI = () => {
+    return Axios.create({
+        baseURL: "https://twitterapi.liara.run/api",
         headers: {
-            API_KEY: "lnhfkagfjasgfjbfmafjagfanfaskabdfasb"
+            'x-auth-token': localStorage.getItem("x-auth-token")
         }
-    })
-}
+    });
+};

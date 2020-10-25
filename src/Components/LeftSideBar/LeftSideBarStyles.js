@@ -4,11 +4,14 @@ const useStyle = makeStyles(theme => ({
     root: {
         width: '25%',
         backgroundColor: '#fff',
-        padding: '1.5rem 2rem'
+        padding: '1.5rem 2rem',
+        overflow:'auto'
     },
     profileImg: {
-        width: 'max-content',
-        borderRadius: '50%'
+        width: '50px',
+        height: '50px',
+        borderRadius: '50%',
+        cursor: 'pointer'
     },
     profileText: {
         width: 'max-content',
@@ -29,17 +32,20 @@ const useStyle = makeStyles(theme => ({
         borderRadius: '2.5rem',
         padding: '11px 24px'
     },
-    twitterTitle:{
+    twitterTitle: {
         fontSize: '1.1rem',
         fontWeight: '600',
         marginBottom: '11px',
     },
-    twitterNameParent:{
+    twitterNameParent: {
         width: 'max-content',
         marginRight: '.5rem',
     },
-    twitterParent:{
+    twitterParent: {
         padding: '10px 0'
+    },
+    menuItem: {
+        fontFamily: 'shabnam'
     }
 }))
 

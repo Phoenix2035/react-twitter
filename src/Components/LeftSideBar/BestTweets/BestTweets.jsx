@@ -4,13 +4,18 @@ import useStyle from "../LeftSideBarStyles";
 
 function BestTweets({item}) {
     const classes = useStyle()
+
+    const getImage = () => {
+        if (item.image) return item.image
+        return "/image/person.png"
+    }
     return (
-        <ButtonBase style={{width:'100%'}}>
+        <ButtonBase style={{width: '100%'}}>
             <Grid container className={classes.twitterParent}>
-                <img src={item.img} alt="user" className={classes.profileImg}/>
-                <Grid container item direction={"column"} className={classes.twitterNameParent}>
+                <img src={getImage()} alt="user" className={classes.profileImg}/>
+                <Grid container item direction={"column"} alignItems={"flex-start"} className={classes.twitterNameParent}>
                     <Typography className={classes.profileName}>{item.name}</Typography>
-                    <Typography className={classes.profileId}>{item.id}</Typography>
+                    <Typography className={classes.profileId}>{item.username}</Typography>
                 </Grid>
             </Grid>
         </ButtonBase>
